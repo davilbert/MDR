@@ -6,26 +6,13 @@ from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.shortcuts import render, redirect, get_object_or_404
 # Create your views here.
+
 def index(request):
     articles = Article.objects.all()
     comments = Comment.objects.all()
     return render(request, 'news_blog/news_list.html', {'articles':articles})
-articles = [
-   {
-       'id': 1,
-       'title': 'OH MY GOD',
-       'text': 'This is demo of sequencing guide'
-   },
-   {
-       'id': 2,
-       'title': 'SO I LIKE THIS SHIT',
-       'text': 'DNA is a trash'
-   },
-{
-       'id': 3,
-       'title': 'IT IS HARD',
-       'text': 'But it is ok'
-   }]
+
+
 def get_article(request, article_id):
    try:
        article = Article.objects.get(id=article_id)
