@@ -57,17 +57,21 @@ background-color: rgba(255, 255, 255, 0.85)
  <div class="collapse navbar-collapse" id="navbarCollapse">
    <ul class="navbar-nav mr-auto">
        <li class="nav-item ">
-           <a class="nav-link" href={% url 'author' %}><font face="Bookman Old Style">Архив</font></a>
+           <a class="nav-link" href={% url 'author' %}><font face="Bookman Old Style">История</font></a>
 
      </li>
         <li class="nav-item ">
-            <a class="nav-link" href="#"><font face="Bookman Old Style">Новости</font></a>
+            <a class="nav-link" href="#"><font face="Bookman Old Style">Профессия</font></a>
+
+     </li>
+	   <li class="nav-item ">
+            <a class="nav-link" href="#"><font face="Bookman Old Style">Актуальное</font></a>
 
      </li>
 
 
      <li class="nav-item">
-         <a class="nav-link" href={% url 'now' %}><font face="Bookman Old Style">Интересное</font></a>
+         <a class="nav-link" href={% url 'now' %}><font face="Bookman Old Style">Секвенирование</font></a>
    </ul>
 
  </div>
@@ -78,7 +82,7 @@ background-color: rgba(255, 255, 255, 0.85)
 
 <main role="main">
 
-    <h1>{% block title %}It's fuckin biology, baby{% endblock %}</h1>
+    <h1>{% block title %}Базовые статьи{% endblock %}</h1>
     {% block content %}
     {% endblock %}
 
